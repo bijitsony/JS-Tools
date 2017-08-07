@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="arclength.js"></script>
+  <script src="jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+  <section id="arcProperties">
+    <h3>Calculate Arc length or Radious or Angle</h3>
+    <p>Please maintain same units for all inputs</p>
+
+    <!-- User Inputs -->
+    <div class="options">
+      <select id="this">
+          <<option>Select One</option>
+          <option value="arcLength">Arc Length</option>
+          <option value="arcRadius">Arc Radius</option>
+          <option value="centreAngle">Centre Angle</option>
+        </select>
+    </div>
+
+    <div id="inputs">
+
+      <div id="div1" style="display:none;">
+        <label>Radius:</label><input type="number" id="inputRadius">
+        <label>Angle:</label><input type="number" id="inputAngle">
+        <p><button type="button" onclick="resultArcLength()">Calculate Arc Length</button></p>
+      </div>
+
+      <div id="div2" style="display:none;">
+        <label>Arc Length:</label><input type="number" id="inputArcLength">
+        <label>Angle:</label><input type="number" id="inputAngle2">
+        <p><button type="button" onclick="resultArcRadius()">Calculate Arc Radius</button></p>
+      </div>
+
+      <div id="div3" style="display:none;">
+        <label>Arc Length:</label><input type="number" id="inputArcLength2">
+        <label>Radius:</label><input type="number" id="inputRadius2">
+        <p><button type="button" onclick="resultCentreAngle()">Calculate Centre Angle</button></p>
+      </div>
+
+    </div>
+
+    <p id="selectionMsg"></p>
+
+    <!-- Output -->
+    <p id="arcValue"></p>
+  </section>
+</body>
+
+</html>

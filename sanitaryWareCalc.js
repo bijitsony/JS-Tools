@@ -21,7 +21,7 @@ window.onload = function() {
 function calcPax() {
   // Taking input
   var a = document.getElementById('carpetArea').valueAsNumber;
-  // Calculating Arc Length
+  // Calculating Number of People
   var result = (a / 4);
   var positiveResult = Math.abs(result);
 
@@ -29,7 +29,7 @@ function calcPax() {
 }
 
 function calcMale() {
-  // Taking input
+  // Calculating Number of Male
   var a = document.getElementById('percentageOfMale').valueAsNumber;
   var result = (a / 100) * calcPax();
   var positiveResult = Math.ceil(result);
@@ -38,7 +38,7 @@ function calcMale() {
 }
 
 function calcFemale() {
-  // Taking input
+  // Calculating Number of Male
   var a = document.getElementById('percentageOfMale').valueAsNumber;
   var result = ((100 - a) / 100) * calcPax();
   var positiveResult = Math.ceil(result);
@@ -47,7 +47,7 @@ function calcFemale() {
 }
 
 function calcUrinals() {
-
+  // Calculating Number of Urinals
   var result = calcMale() / 10;
   var positiveResult = Math.ceil(result);
 
@@ -55,7 +55,7 @@ function calcUrinals() {
 }
 
 function calcWCMale() {
-
+  // Calculating Number of WC for Male
   var result = calcMale() / 50;
   var positiveResult = Math.ceil(result);
 
@@ -63,7 +63,7 @@ function calcWCMale() {
 }
 
 function calcWCFemale() {
-
+  // Calculating Number of WC for Male
   var result = calcFemale() / 50;
   var positiveResult = Math.ceil(result);
 
@@ -71,6 +71,6 @@ function calcWCFemale() {
 }
 
 function resultSanitaryWare() {
-
+  // Declaring Result
   document.getElementById('resultSanitaryWare').innerHTML = "Urinals: " + calcUrinals() + "<br/>" + "WC for Male:" + calcWCMale() + "<br/>" + "WC for Female:" + calcWCFemale();
 }

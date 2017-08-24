@@ -48,15 +48,28 @@ function calcFemale() {
 
 function calcUrinals() {
   // Calculating Number of Urinals
-  var result = calcMale() / 10;
-  var positiveResult = Math.ceil(result);
-
+  if (calcMale() < 20) {
+    var result = 1;
+    var positiveResult = Math.ceil(result);
+  };
+  if (calcMale() > 20 && calcMale() <= 100) {
+    var result = calcMale() / 25;
+    var positiveResult = Math.ceil(result);
+  };
+  if (calcMale() > 100 && calcMale() <= 500) {
+    var result = calcMale() / 50;
+    var positiveResult = Math.ceil(result);
+  };
+  if (calcMale() > 500) {
+    var result = calcMale() / 50;
+    var positiveResult = Math.ceil(result);
+  };
   return positiveResult;
 }
 
 function calcWCMale() {
   // Calculating Number of WC for Male
-  var result = calcMale() / 50;
+  var result = calcMale() / 100;
   var positiveResult = Math.ceil(result);
 
   return positiveResult;
@@ -64,7 +77,7 @@ function calcWCMale() {
 
 function calcWCFemale() {
   // Calculating Number of WC for Male
-  var result = calcFemale() / 50;
+  var result = calcFemale() / 100;
   var positiveResult = Math.ceil(result);
 
   return positiveResult;

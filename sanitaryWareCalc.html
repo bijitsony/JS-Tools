@@ -18,36 +18,43 @@
     <div class="options">
       <select id="buildingType">
           <<option>Select One</option>
-          <option value="commercial">Commercial</option>
+          <option value="educational">educational</option>
+          <option value="business">Business</option>
           <option value="industrial">Industrial</option>
-          <option value="institutional">Institutional</option>
+          <option value="special">Special Buildings</option>
         </select>
     </div>
 
     <div id="inputs">
 
-      <div id="commercial" style="display:none;">
+      <div id="educational" style="display:none;">
+        <label>carpet Area: </label><input type="number" id="carpetArea-educational">
+        <label>Male (%): </label><input type="number" id="percentageOfMale-educational">
+        <p><button type="button" onclick="educationalType()">Calculate Sanitary Ware</button></p>
+      </div>
+
+      <div id="business" style="display:none;">
         <div>
           <p>As per GDCR, One person requires 4 m² of carpet area. So dividing Carpet Area with 4 will give total population.<br />
             After that, Male and Female population is derived from the Percentage of Male, which is provided by you.<br />
             As per GDCR, ## of Urinals to be provided for ## of Male Population and, ## of WC to be provided for ## of Male Population<br />
             As per GDCR, ## of WC to be provided for ## of FeMale Population</p>
         </div>
-        <label>Carpet Area:</label><input type="number" id="carpetArea">
-        <label>Male (%):</label><input type="number" id="percentageOfMale">
+        <label>Carpet Area: </label><input type="number" id="carpetArea-business">
+        <label>Male (%): </label><input type="number" id="percentageOfMale-business">
         <p><button type="button" onclick="businessType()">Calculate Sanitary Ware</button></p>
       </div>
 
       <div id="industrial" style="display:none;">
-        <label>??</label><input type="number" id="inputArcLength">
-        <label>??</label><input type="number" id="inputAngle2">
-        <p><button type="button" onclick="resultArcRadius()">??</button></p>
+        <label>carpet Area: </label><input type="number" id="carpetArea-industrial">
+        <label>Male (%): </label><input type="number" id="percentageOfMale-industrial">
+        <p><button type="button" onclick="industrialType()">Calculate Sanitary Ware</button></p>
       </div>
 
-      <div id="institutional" style="display:none;">
-        <label>??</label><input type="number" id="inputArcLength2">
-        <label>??</label><input type="number" id="inputRadius2">
-        <p><button type="button" onclick="resultCentreAngle()">??</button></p>
+      <div id="special" style="display:none;">
+        <label>Number of Seats: </label><input type="number" id="seats-special">
+        <label>Male (%): </label><input type="number" id="percentageOfMale-special">
+        <p><button type="button" onclick="specialType()">Calculate Sanitary Ware</button></p>
       </div>
 
     </div>

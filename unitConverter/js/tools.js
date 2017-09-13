@@ -37,7 +37,7 @@ function resultArcLength() {
   var result2 = (a%12);
   var positiveResult = toInteger(Math.abs(result1)) + "\'" + toInteger(Math.abs(result2)) + "\"";
   // Appending result
-  document.getElementById('arcValue').innerHTML = "The result is: " + positiveResult;
+  document.getElementById('rrr').innerHTML = positiveResult;
 }
 
 // Function for calculating arc radius

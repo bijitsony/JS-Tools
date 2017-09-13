@@ -1,7 +1,8 @@
 // Following function takes a numebrs and returns a rounded off number
 function toInteger(number) {
   // Making float to show 2 decimal places
-  return parseFloat(number).toFixed(0);
+  var floorValue = Math.floor(number);
+  return floorValue;
 };
 
 // Following functions calculate the arc length / arc raduis / centre angle of an arc

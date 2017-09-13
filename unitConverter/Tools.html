@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>MSA Tools</title>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="css/tools.css" />
+  <!-- Link to javascript -->
+  <script src="js\tools.js" defer></script>
+  <script src="js\jquery-3.2.1.min.js"></script>
+  <!-- Link to MSA Logo -->
+  <link rel="icon" type="image/png" href="images/msaLogo.png">
+</head>
+
+
+<body>
+
+  <section id="arcProperty">
+    <h3>Calculate Arc length or Radious or Angle</h3>
+    <p>Please maintain same units for all inputs</p>
+
+    <!-- User Inputs -->
+    <div class="options">
+      <select id="this">
+          <<option value="selectionNote">Select One</option>
+          <option value="arcLength">Arc Length</option>
+          <option value="arcRadius">Arc Radius</option>
+          <option value="centreAngle">Centre Angle</option>
+        </select>
+    </div> <br /><br />
+
+    <div>
+
+      <div id="div1" style="display:none;">
+        <label>Radius:</label><br /><input type="number" id="inputRadius">
+        <label>Angle:</label><br /><input type="number" id="inputAngle">
+        <p><button type="button" onclick="resultArcLength()">Calculate Arc Length</button></p>
+      </div>
+
+      <div id="div2" style="display:none;">
+        <label>Arc Length:</label><br /><input type="number" id="inputArcLength">
+        <label>Angle:</label><br /><input type="number" id="inputAngle2">
+        <p><button type="button" onclick="resultArcRadius()">Calculate Arc Radius</button></p>
+      </div>
+
+      <div id="div3" style="display:none;">
+        <label>Arc Length:</label><br /><input type="number" id="inputArcLength2">
+        <label>Radius:</label><br /><input type="number" id="inputRadius2">
+        <p><button type="button" onclick="resultCentreAngle()">Calculate Centre Angle</button></p>
+      </div>
+
+    </div>
+
+    <p id="selectionMsg"></p>
+
+    <!-- Output -->
+    <p id="arcValue"></p>
+  </section>
+
+</body>
+
+</html>

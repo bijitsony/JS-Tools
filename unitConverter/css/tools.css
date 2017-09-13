@@ -1,0 +1,37 @@
+/*This style sheet is for all the MSA tools*/
+
+body {
+  margin: auto;
+}
+
+section {
+  background-color: #f1f1f1;
+  box-shadow: 3px 3px 5px lightgray;
+  padding: 20px;
+  width: 50%;
+  margin: 10px auto;
+}
+
+div {
+  display: inline-block;
+}
+
+label {
+  display: inline;
+  float: left;
+  clear: left;
+  text-align: left;
+}
+
+.radio {
+  margin-bottom: 10px;
+}
+
+.inputs input {
+  display: inline-block;
+  float: left;
+}
+
+.inputs {
+  margin-top: 10px;
+}

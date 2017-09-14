@@ -7,60 +7,68 @@ function toInteger(number) {
 
 // Following functions calculate the arc length / arc raduis / centre angle of an arc
 
-// Run script on page load
-window.onload = function() {
+// Function for calculating arc length
+function inchTo() {
+  // Taking input
+  var a = document.getElementById('inputInch').valueAsNumber;
 
-  // Following are the loops for hiding / showing particular divisitions on option selection
-  $('#this').on('change', function() {
-    if (this.value == "arcLength") {
-      $('#div1').show();
-      $('#div2,#div3,#selectionMsg').hide();
-    } else if (this.value == "arcRadius") {
-      $('#div2').show();
-      $('#div1,#div3,#selectionMsg').hide();
-    } else if (this.value == "centreAngle") {
-      $('#div3').show();
-      $('#div1,#div2,#selectionMsg').hide();
-    } else {
-      $('#selectionMsg').show();
-      $('#div1,#div2,#div3').hide();
-      document.getElementById('selectionMsg').innerHTML = "Please select any of options";
-    }
-  });
+  // inch to ft
+
+  var inFt = (a / 12);
+  var inIn = (a % 12);
+  var inchToFtIn = toInteger(Math.abs(inFt)) + "\'" + toInteger(Math.abs(inIn)) + "\"";
+  // Appending result
+  document.getElementById('inputFt').value = inchToFtIn;
+
+  // inch to mm
+
+  var inMm = (a * 25.4);
+  var inchToMm = Math.abs(inMm);
+  document.getElementById('inputMm').value = inchToMm;
+
+  // inch to cm
+
+  var inCm = (a * 2.54);
+  var inchToCm = Math.abs(inCm);
+  document.getElementById('inputCm').value = inchToCm;
+
+  // inch to m
+
+  var inM = (a * 0.0254);
+  var inchToM = Math.abs(inM);
+  document.getElementById('inputM').value = inchToM;
+
 };
 
-// Function for calculating arc length
-function resultArcLength() {
-  // Taking input
-  var a = document.getElementById('inputRadius').valueAsNumber;
-  // Calculating Arc Length
-  var result1 = (a/12);
-  var result2 = (a%12);
-  var positiveResult = toInteger(Math.abs(result1)) + "\'" + toInteger(Math.abs(result2)) + "\"";
-  // Appending result
-  document.getElementById('rrr').innerHTML = positiveResult;
-}
 
-// Function for calculating arc radius
-function resultArcRadius() {
+function mmTo() {
   // Taking input
-  var a = document.getElementById('inputArcLength').valueAsNumber;
-  var b = document.getElementById('inputAngle2').valueAsNumber;
-  // Calculating Arc Radius
-  var result = (a * 360) / (2 * Math.PI * b);
-  var positiveResult = toInteger(Math.abs(result));
-  // Appending result
-  document.getElementById('arcValue').innerHTML = "The result is: " + positiveResult;
-}
+  var a = document.getElementById('inputMm').valueAsNumber;
 
-// Function for calculating arc radius
-function resultCentreAngle() {
-  // Taking input
-  var a = document.getElementById('inputArcLength2').valueAsNumber;
-  var b = document.getElementById('inputRadius2').valueAsNumber;
-  // Calculating Centre Angle
-  var result = (a * 360) / (2 * Math.PI * b);
-  var positiveResult = toInteger(Math.abs(result));
+  // mm to in
+
+  var cmIn = (a * 0.0393701);
+  var cmToIn = Math.abs(cmIn);
+  document.getElementById('inputInch').value = cmToIn;
+
+  // inch to ft
+
+  var inFt = (a / 12);
+  var inIn = (a % 12);
+  var inchToFtIn = toInteger(Math.abs(inFt)) + "\'" + toInteger(Math.abs(inIn)) + "\"";
   // Appending result
-  document.getElementById('arcValue').innerHTML = "The result is: " + positiveResult;
-}
+  document.getElementById('inputFt').value = inchToFtIn;
+
+  // inch to cm
+
+  var inCm = (a * 2.54);
+  var inchToCm = Math.abs(inCm);
+  document.getElementById('inputCm').value = inchToCm;
+
+  // inch to m
+
+  var inM = (a * 0.0254);
+  var inchToM = Math.abs(inM);
+  document.getElementById('inputM').value = inchToM;
+
+};

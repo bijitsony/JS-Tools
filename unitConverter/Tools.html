@@ -17,40 +17,22 @@
 <body>
 
   <section id="arcProperty">
-    <h3>Calculate Arc length or Radious or Angle</h3>
-    <p>Please maintain same units for all inputs</p>
+    <h3>Unit Converter</h3>
+    <p>Please maintain relative units for all inputs</p>
 
     <!-- User Inputs -->
-    <div class="options">
-      <select id="this">
-          <<option value="selectionNote">Select One</option>
-          <option value="arcLength">Arc Length</option>
-          <option value="arcRadius">Arc Radius</option>
-          <option value="centreAngle">Centre Angle</option>
-        </select>
-    </div> <br /><br />
-
     <div>
 
-      <div id="div1" style="display:none;">
-        <label>Radius:</label><br /><input type="number" id="inputRadius" onchange="resultArcLength()">
-        <label>Angle:</label><br /><input type="number" id="inputAngle">
-        <!--<p><button type="button" onclick="resultArcLength()">Calculate Arc Length</button></p>-->
-        <p id="rrr">
-          
-        </p>
-      </div>
+      <div id="unitInput">
+        <label>inch:</label><br /><input type="number" id="inputInch" oninput="inchTo()" value="">
 
-      <div id="div2" style="display:none;">
-        <label>Arc Length:</label><br /><input type="number" id="inputArcLength">
-        <label>Angle:</label><br /><input type="number" id="inputAngle2">
-        <p><button type="button" onclick="resultArcRadius()">Calculate Arc Radius</button></p>
-      </div>
+        <label>ft:</label><br /><input id="inputFt" oninput="" value="">
 
-      <div id="div3" style="display:none;">
-        <label>Arc Length:</label><br /><input type="number" id="inputArcLength2">
-        <label>Radius:</label><br /><input type="number" id="inputRadius2">
-        <p><button type="button" onclick="resultCentreAngle()">Calculate Centre Angle</button></p>
+        <label>mm:</label><br /><input type="number" id="inputMm" oninput="mmTo()" value="">
+
+        <label>cm:</label><br /><input type="number" id="inputCm" oninput="#" value="">
+
+        <label>m:</label><br /><input type="number" id="inputM" oninput="#" value="">
       </div>
 
     </div>
@@ -58,7 +40,7 @@
     <p id="selectionMsg"></p>
 
     <!-- Output -->
-    <p id="arcValue"></p>
+    <p id="rrr"></p>
   </section>
 
 </body>

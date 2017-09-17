@@ -28,7 +28,7 @@ label {
 }
 
 .inputs input {
-  display: inline-block;
+  display: inline;
   float: left;
 }
 

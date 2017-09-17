@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="js\tools.js"></script>
+</head>
+
+<body>
+  <section id="arcProperties">
+    <h3>Calculate Weight</h3>
+
+    <!-- User Inputs -->
+
+    <div id="inputs">
+
+        <label>X (mm):</label><input type="number" id="inputX">
+        <label>Y (mm):</label><input type="number" id="inputY">
+        <label>Thickness (mm):</label><input type="number" id="inputZ">
+        <label>Specific Gravity (kg/m³):</label><input type="number" id="inputG">
+        <p><button type="button" onclick="weightCalc()">Calculate Weight</button></p>
+
+    </div>
+
+    <!-- Output -->
+    <p id="weightValue"></p>
+  </section>
+</body>
+
+</html>
